@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="es" data-lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- REVISAR: reemplazar NOMBRE_COMPLETO por tu nombre (aparece aquí y en .hero__name) -->
+  <title>NOMBRE_COMPLETO · AI/ML</title>
+  <meta name="description" content="Perfil académico y profesional: Doctor en Ciencias de Información Geoespacial, AI/ML Technical Lead.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%232563eb'/%3E%3Cellipse cx='32' cy='32' rx='26' ry='10' fill='none' stroke='white' stroke-width='3' transform='rotate(-25 32 32)'/%3E%3Ccircle cx='32' cy='32' r='8' fill='white'/%3E%3C/svg%3E">
+  <script>
+    // Aplica idioma y tema antes de pintar para evitar parpadeo.
+    (function () {
+      var d = document.documentElement, lang, theme;
+      try { lang = localStorage.getItem("lang"); theme = localStorage.getItem("theme"); } catch (e) {}
+      if (!lang) lang = (navigator.language || "es").slice(0, 2) === "en" ? "en" : "es";
+      d.setAttribute("data-lang", lang);
+      d.setAttribute("lang", lang);
+      if (theme === "light" || theme === "dark") d.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --surface: #ffffff;
+      --text: #111827;
+      --muted: #4b5563;
+      --border: #e5e7eb;
+      --accent: #2563eb;
+      --accent-soft: #dbeafe;
+      --shadow: 0 1px 2px rgba(0,0,0,.04), 0 4px 16px rgba(0,0,0,.05);
+      color-scheme: light;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #0b0f17;
+        --surface: #121826;
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --border: #1f2937;
+        --accent: #60a5fa;
+        --accent-soft: #172554;
+        --shadow: none;
+        color-scheme: dark;
+      }
+    }
+    :root[data-theme="dark"] {
+      --bg: #0b0f17;
+      --surface: #121826;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --accent: #60a5fa;
+      --accent-soft: #172554;
+      --shadow: none;
+      color-scheme: dark;
+    }
+
+    /* Idioma: se muestra solo el bloque del idioma activo */
+    html[data-lang="es"] [data-l="en"],
+    html[data-lang="en"] [data-l="es"] { display: none !important; }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+
+    /* Barra superior */
+    .topbar {
+      position: sticky; top: 0; z-index: 10;
+      background: color-mix(in srgb, var(--bg) 85%, transparent);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 56px; }
+    .topbar nav { display: flex; gap: 18px; font-size: 14px; overflow-x: auto; }
+    .topbar nav a { color: var(--muted); white-space: nowrap; }
+    .topbar nav a:hover { color: var(--text); text-decoration: none; }
+    .controls { display: flex; gap: 8px; flex-shrink: 0; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      height: 34px; padding: 0 12px;
+      border: 1px solid var(--border); border-radius: 999px;
+      background: var(--surface); color: var(--text);
+      font: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
+    }
+    .btn:hover { border-color: var(--accent); }
+    .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .btn svg { width: 16px; height: 16px; }
+    .icon-sun { display: none; }
+    html[data-theme="dark"] .icon-sun { display: inline; }
+    html[data-theme="dark"] .icon-moon { display: none; }
+    @media (prefers-color-scheme: dark) {
+      html:not([data-theme="light"]) .icon-sun { display: inline; }
+      html:not([data-theme="light"]) .icon-moon { display: none; }
+    }
+
+    /* Hero */
+    .hero { padding: 64px 0 40px; }
+    .hero__eyebrow { color: var(--accent); font-weight: 700; font-size: 14px; letter-spacing: .04em; text-transform: uppercase; margin: 0 0 8px; }
+    .hero__name { font-size: clamp(32px, 6vw, 48px); line-height: 1.1; margin: 0 0 12px; letter-spacing: -.02em; }
+    .hero__lead { font-size: 18px; color: var(--muted); max-width: 680px; margin: 0 0 24px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip { font-size: 13px; padding: 4px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+
+    /* Secciones */
+    section { padding: 32px 0; border-top: 1px solid var(--border); scroll-margin-top: 64px; }
+    h2 { font-size: 22px; margin: 0 0 20px; letter-spacing: -.01em; }
+
+    /* Línea de tiempo */
+    .timeline { list-style: none; margin: 0; padding: 0; position: relative; }
+    .timeline::before { content: ""; position: absolute; left: 7px; top: 6px; bottom: 6px; width: 2px; background: var(--border); }
+    .timeline li { position: relative; padding: 0 0 24px 32px; }
+    .timeline li:last-child { padding-bottom: 0; }
+    .timeline li::before {
+      content: ""; position: absolute; left: 0; top: 6px; width: 16px; height: 16px;
+      border-radius: 50%; background: var(--surface); border: 3px solid var(--accent);
+    }
+    .item__title { font-weight: 700; margin: 0; }
+    .item__meta { color: var(--muted); font-size: 14px; margin: 2px 0 6px; }
+    .item__body { margin: 0; color: var(--text); }
+
+    /* Tarjetas */
+    .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+      padding: 20px; box-shadow: var(--shadow);
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    a.card { color: inherit; }
+    a.card:hover { text-decoration: none; border-color: var(--accent); }
+    .card__kicker { font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; display: flex; align-items: center; gap: 8px; }
+    .card__kicker svg { width: 18px; height: 18px; color: var(--text); }
+    .card__title { font-weight: 700; font-size: 17px; margin: 0; }
+    .card__body { margin: 0; color: var(--muted); font-size: 15px; }
+    .card__link { margin-top: auto; font-size: 14px; font-weight: 600; color: var(--accent); }
+
+    .skills { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
+    .skills li { border: 1px solid var(--border); background: var(--surface); padding: 6px 12px; border-radius: 8px; font-size: 14px; }
+
+    footer { border-top: 1px solid var(--border); padding: 24px 0 40px; color: var(--muted); font-size: 13px; }
+
+    @media (max-width: 560px) {
+      .topbar nav { display: none; }
+      .hero { padding-top: 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="wrap">
+      <nav aria-label="Secciones">
+        <a href="#formacion"><span data-l="es">Formación</span><span data-l="en">Education</span></a>
+        <a href="#experiencia"><span data-l="es">Experiencia</span><span data-l="en">Experience</span></a>
+        <a href="#proyectos"><span data-l="es">Proyectos</span><span data-l="en">Projects</span></a>
+        <a href="#contacto"><span data-l="es">Contacto</span><span data-l="en">Contact</span></a>
+      </nav>
+      <div class="controls">
+        <button class="btn" id="lang-toggle" type="button" aria-label="Cambiar idioma / Switch language">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+          <span data-l="es">EN</span><span data-l="en">ES</span>
+        </button>
+        <button class="btn" id="theme-toggle" type="button" aria-label="Cambiar tema claro u oscuro / Toggle light or dark theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <span data-l="es">Tema</span><span data-l="en">Theme</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- Presentación -->
+    <div class="hero">
+      <p class="hero__eyebrow">
+        <span data-l="es">Doctor en Ciencias · AI/ML Technical Lead</span>
+        <span data-l="en">PhD in Science · AI/ML Technical Lead</span>
+      </p>
+      <h1 class="hero__name">NOMBRE_COMPLETO</h1>
+      <p class="hero__lead">
+        <span data-l="es">Científico de datos con formación en ingeniería de software, ciencia espacial e información geoespacial. Convierto problemas complejos, desde la física de la ionósfera hasta decisiones comerciales, en soluciones de Machine Learning medibles, escalables y gobernadas.</span>
+        <span data-l="en">Data scientist with a background in software engineering, space science and geospatial information science. I turn complex problems, from ionospheric physics to commercial decisions, into measurable, scalable and well-governed Machine Learning solutions.</span>
+      </p>
+      <div class="chips">
+        <span class="chip">Machine Learning</span>
+        <span class="chip">MLOps</span>
+        <span class="chip">Time Series</span>
+        <span class="chip"><span data-l="es">Ciencia de datos geoespaciales</span><span data-l="en">Geospatial data science</span></span>
+        <span class="chip"><span data-l="es">Clima espacial</span><span data-l="en">Space weather</span></span>
+      </div>
+    </div>
+
+    <!-- Formación -->
+    <section id="formacion" aria-labelledby="h-formacion">
+      <h2 id="h-formacion"><span data-l="es">Formación</span><span data-l="en">Education</span></h2>
+      <!-- REVISAR: agregar institución y años en cada .item__meta -->
+      <ol class="timeline">
+        <li>
+          <p class="item__title"><span data-l="es">Doctorado en Ciencias</span><span data-l="en">PhD in Science</span></p>
+          <p class="item__meta"><span data-l="es">Ciencias de Información Geoespacial</span><span data-l="en">Geospatial Information Science</span></p>
+        </li>
+        <li>
+          <p class="item__title"><span data-l="es">Maestría en Ciencias</span><span data-l="en">Master of Science</span></p>
+          <p class="item__meta"><span data-l="es">Ciencia y Tecnología del Espacio</span><span data-l="en">Space Science and Technology</span></p>
+        </li>
+        <li>
+          <p class="item__title"><span data-l="es">Especialidad en Tecnologías de la Información y Comunicación</span><span data-l="en">Specialization in Information and Communication Technologies</span></p>
+        </li>
+        <li>
+          <p class="item__title"><span data-l="es">Ingeniería de Software</span><span data-l="en">Software Engineering</span></p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Experiencia -->
+    <section id="experiencia" aria-labelledby="h-experiencia">
+      <h2 id="h-experiencia"><span data-l="es">Experiencia</span><span data-l="en">Experience</span></h2>
+      <ol class="timeline">
+        <li>
+          <p class="item__title">AI/ML Technical Lead · Grupo Bimbo</p>
+          <p class="item__meta"><span data-l="es">2026 – actual · Dirección Global de Inteligencia Artificial, Data &amp; Analytics</span><span data-l="en">2026 – present · Global Artificial Intelligence Office, Data &amp; Analytics</span></p>
+          <p class="item__body"><span data-l="es">Estrategia y gobierno de Machine Learning a nivel global; liderazgo técnico de soluciones de ML prescriptivo para planificación comercial y de pronóstico de demanda; miembro del AI Governance Council.</span><span data-l="en">Global Machine Learning strategy and governance; technical leadership of prescriptive ML solutions for commercial planning and demand forecasting; member of the AI Governance Council.</span></p>
+        </li>
+        <li>
+          <p class="item__title"><span data-l="es">Científico de Datos y Científico Espacial · Megacable</span><span data-l="en">Data Scientist and Space Scientist · Megacable</span></p>
+          <p class="item__meta">2023 – 2025</p>
+          <p class="item__body"><span data-l="es">Fundé la primera dirección de Inteligencia Artificial de la empresa.</span><span data-l="en">Founded the company's first Artificial Intelligence office.</span></p>
+        </li>
+        <li>
+          <p class="item__title"><span data-l="es">Científico de Datos · Laboratorio Nacional de Clima Espacial, UNAM</span><span data-l="en">Data Scientist · National Space Weather Laboratory, UNAM</span></p>
+          <p class="item__body"><span data-l="es">Metodologías de cómputo científico sobre grandes volúmenes de datos para caracterizar fenómenos físicos complejos, como el contenido total de electrones en la ionósfera.</span><span data-l="en">Scientific computing methods over large datasets to characterize complex physical phenomena, such as ionospheric total electron content.</span></p>
+        </li>
+        <li>
+          <p class="item__title"><span data-l="es">Profesor de Datos Espaciales</span><span data-l="en">Lecturer in Spatial Data</span></p>
+          <p class="item__body"><span data-l="es">Licenciatura en Tecnologías para la Información en Ciencias.</span><span data-l="en">Bachelor's program in Information Technologies for Science.</span></p>
+        </li>
+      </ol>
+
+      <h2 style="margin-top:32px"><span data-l="es">Áreas de dominio</span><span data-l="en">Areas of expertise</span></h2>
+      <ul class="skills">
+        <li>Machine Learning</li>
+        <li>MLOps</li>
+        <li>Time Series</li>
+        <li><span data-l="es">Filtro de Kalman</span><span data-l="en">Kalman filtering</span></li>
+        <li>Proximity Spatial Analysis</li>
+        <li><span data-l="es">Procesamiento de imágenes geoespaciales</span><span data-l="en">Geospatial image processing</span></li>
+        <li>Big Data</li>
+        <li><span data-l="es">Ingeniería de software</span><span data-l="en">Software engineering</span></li>
+        <li><span data-l="es">Liderazgo técnico de IA</span><span data-l="en">AI technical leadership</span></li>
+      </ul>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" aria-labelledby="h-proyectos">
+      <h2 id="h-proyectos"><span data-l="es">Proyectos</span><span data-l="en">Projects</span></h2>
+      <div class="grid">
+        <a class="card" href="https://github.com/jdxaquino/game-of-life" target="_blank" rel="noopener">
+          <span class="card__kicker">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>
+            GitHub
+          </span>
+          <p class="card__title"><span data-l="es">Juego de la Vida</span><span data-l="en">Game of Life</span></p>
+          <p class="card__body"><span data-l="es">El autómata celular de Conway en Python con pygame y NumPy: reglas configurables en notación B/S, biblioteca de patrones, color por edad y una versión web sin dependencias.</span><span data-l="en">Conway's cellular automaton in Python with pygame and NumPy: configurable B/S rules, a pattern library, age-based coloring and a dependency-free web version.</span></p>
+          <span class="card__link"><span data-l="es">Ver repositorio →</span><span data-l="en">View repository →</span></span>
+        </a>
+        <!-- REVISAR: ajustar título y descripción del notebook de Colab -->
+        <a class="card" href="https://colab.research.google.com/drive/188a1lUF7BwTqLVDZfK_IQe12NMq-7V40?usp=sharing" target="_blank" rel="noopener">
+          <span class="card__kicker">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 7a5 5 0 1 0 0 10M15 7a5 5 0 1 1 0 10"/></svg>
+            Google Colab
+          </span>
+          <p class="card__title"><span data-l="es">Notebook en Google Colab</span><span data-l="en">Google Colab notebook</span></p>
+          <p class="card__body"><span data-l="es">Notebook público y ejecutable en el navegador.</span><span data-l="en">Public notebook you can run in the browser.</span></p>
+          <span class="card__link"><span data-l="es">Abrir notebook →</span><span data-l="en">Open notebook →</span></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" aria-labelledby="h-contacto">
+      <h2 id="h-contacto"><span data-l="es">Contacto</span><span data-l="en">Contact</span></h2>
+      <div class="grid">
+        <!-- REVISAR: reemplazar URL_LINKEDIN por la URL de tu perfil -->
+        <a class="card" href="URL_LINKEDIN" target="_blank" rel="noopener">
+          <span class="card__kicker">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.5V9h3.6v11.5zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg>
+            LinkedIn
+          </span>
+          <span class="card__link"><span data-l="es">Ver perfil →</span><span data-l="en">View profile →</span></span>
+        </a>
+        <a class="card" href="https://github.com/jdxaquino" target="_blank" rel="noopener">
+          <span class="card__kicker">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>
+            GitHub
+          </span>
+          <span class="card__link">github.com/jdxaquino →</span>
+        </a>
+        <a class="card" href="https://colab.research.google.com/drive/188a1lUF7BwTqLVDZfK_IQe12NMq-7V40?usp=sharing" target="_blank" rel="noopener">
+          <span class="card__kicker">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 7a5 5 0 1 0 0 10M15 7a5 5 0 1 1 0 10"/></svg>
+            Google Colab
+          </span>
+          <span class="card__link"><span data-l="es">Abrir notebook →</span><span data-l="en">Open notebook →</span></span>
+        </a>
+        <!-- REVISAR: reemplazar CORREO_CONTACTO en href y en el texto -->
+        <a class="card" href="mailto:CORREO_CONTACTO">
+          <span class="card__kicker">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+            <span data-l="es">Correo</span><span data-l="en">Email</span>
+          </span>
+          <span class="card__link">CORREO_CONTACTO →</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year">2026</span> NOMBRE_COMPLETO</div>
+  </footer>
+
+  <script>
+    (function () {
+      var d = document.documentElement;
+      function save(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+
+      document.getElementById("lang-toggle").addEventListener("click", function () {
+        var next = d.getAttribute("data-lang") === "es" ? "en" : "es";
+        d.setAttribute("data-lang", next);
+        d.setAttribute("lang", next);
+        save("lang", next);
+      });
+
+      document.getElementById("theme-toggle").addEventListener("click", function () {
+        var current = d.getAttribute("data-theme") ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        var next = current === "dark" ? "light" : "dark";
+        d.setAttribute("data-theme", next);
+        save("theme", next);
+      });
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
