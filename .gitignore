@@ -1,0 +1,14 @@
+# Restos locales del portafolio Astro (rama local astro-portfolio)
+dist/
+.astro/
+node_modules/
+_astro/
+
+# Bitácoras y secretos
+*.log
+.env
+.env.*
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
